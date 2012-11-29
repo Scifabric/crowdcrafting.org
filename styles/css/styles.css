@@ -174,6 +174,10 @@ body {
   box-shadow: none;
   color: #FFF;
 }
+.navbar .nav a.dropdown-toggle:hover,
+.navbar .nav a.dropdown-toggle:focus {
+  background-color: transparent;
+}
 .nav .dropdown-toggle .caret,
 .nav .dropdown-toggle:hover .caret {
   border-bottom-color: #FFF;
