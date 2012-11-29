@@ -103,6 +103,29 @@ a[rel="popover"] {
   background-color: @primary;
 }
 
+input:focus,
+textarea:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px fade(@primary, 60%);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px fade(@primary, 60%);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px fade(@primary, 60%);
+}
+
 
 /* Layout */
 /* ====== */
@@ -145,7 +168,8 @@ body {
 	color:#FFF;
 	text-shadow: none;
 }
-.navbar .nav > li > a:hover {
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
 	background-color: lighten(@primary, 10%);
 	color:#FFF;
 }
@@ -157,9 +181,13 @@ body {
 	box-shadow: none;
 	color:#FFF;
 }
-.navbar .nav li.dropdown > .dropdown-toggle .caret {
+.nav .dropdown-toggle .caret,
+.nav .dropdown-toggle:hover .caret {
 	border-bottom-color: #FFF;
 	border-top-color: #FFF;
+}
+.dropdown-menu {
+	top:54px;
 }
 .navbar .nav > li > a .icon {
 	font-size:22px;
@@ -183,6 +211,28 @@ body {
 }
 .navbar .btn-navbar .icon-bar {
   background-color: darken(@primary, 10%);
+}
+.navbar .navbar-form.form-search .search-query {
+	border:none;
+	width:90px;
+}
+.navbar .navbar-form.form-search {
+	padding-top:20px;
+}
+.navbar .navbar-form.form-search .search-query:focus {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0), inset 0 0 4px fade(@primary, 60%);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0), inset 0 0 4px fade(@primary, 60%);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0), inset 0 0 4px fade(@primary, 60%);
+}
+.navbar .navbar-form.form-search .btn {
+	padding:4px 10px 4px 8px;
+	background-image:none;
+	background-color:#FFF;
+	border:none;
+}
+.navbar .navbar-form.form-search .btn [class^="icon-"],
+.navbar .navbar-form.form-search .btn [class*=" icon-"] {
+	color: @primary;
 }
 
 .banner {
